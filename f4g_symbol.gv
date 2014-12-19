@@ -1,5 +1,5 @@
-/* OsGeo Markus Dornhofer */
-digraph osgeo {
+/* foss4g graph - Markus Dornhofer */
+digraph foss4gSym {
 	size="6,6";
 	node [color=lightblue, style=filled];
 	
