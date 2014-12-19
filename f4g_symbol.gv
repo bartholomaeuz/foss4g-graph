@@ -1,0 +1,9 @@
+/* OsGeo Markus Dornhofer */
+digraph osgeo {
+	size="6,6";
+	node [color=lightblue, style=filled];
+	
+"Applications" [color=lightblue];	
+"Extensions" [color=orange];
+"GeoData"  [color=green,  shape=box];
+}

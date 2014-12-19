@@ -1,0 +1,44 @@
+/* OsGeo Markus Dornhofer */
+digraph osgeo {
+	size="6,6";
+	node [color=lightblue, style=filled];
+	"Browser" -> "OpenLayers"
+	"QGIS" -> "POSTGIS";
+	"QGIS" -> "PGROUTING";
+	"QGIS" -> "SHP File";
+	"QGIS" -> "WMS";
+	"QGIS" -> "WMTS";
+	"OpenLayers" -> "WMS";
+	"OpenLayers" -> "WMTS";	
+	"SHP File" -> "osm2shp" [style=dotted];
+	"osm2shp" -> "OSM";
+	"PGROUTING" -> "POSTGIS";
+	"POSTGIS" -> "osm2pgsql" [style=dotted];
+	"osm2pgsql" -> "OSM";
+	"POSTGIS" -> "POSTGRES";
+	"WMTS" -> "mapnik";
+	"WMS" -> "mapnik";
+	"WMS" -> "GeoServer";
+	"WMS" -> "MapProxy";
+	"MapProxy" -> "WMS";
+	"WMTS" -> "MapProxy";
+	"MapProxy" -> "WMTS";
+	"mapnik" -> "OSM";
+	"mapnik" -> "POSTGIS";
+	"mapnik" -> "SHP File";
+	"GeoServer" -> "SHP File";
+	"MapServer" -> "SHP File";
+	"SHP File" -> "OpenData";
+	"WMTS" -> "OpenData";
+	"WMS" -> "OpenData";	
+"Browser"  [shape=polygon,sides=4,distortion=0.7,color=red];	
+"QGIS"  [shape=polygon,sides=4,distortion=.7,color=red];
+"OpenLayers" [color=blue];		
+"WMS" [shape=triangle, color=green]
+"WMTS" [shape=triangle, color=green]
+"PGROUTING" [color=orange];	
+"POSTGIS" [color=orange];
+"OSM"  [shape=polygon,sides=4,distortion=-0.7,color=green];
+"OpenData"  [shape=polygon,sides=4,distortion=-0.7,color=green];
+"SHP File"  [shape=polygon,sides=4,distortion=-0.7,color=green];
+}
