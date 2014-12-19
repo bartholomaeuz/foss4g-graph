@@ -3,7 +3,11 @@ digraph foss4gSym {
 	size="6,6";
 	node [color=lightblue, style=filled];
 	
-"Applications" [color=lightblue];	
-"Extensions" [color=orange];
-"GeoData"  [color=green,  shape=box];
+"Applications" [shape=polygon,sides=4,distortion=0.7,color=red];	
+"Extensions/Plugin" [color=orange];
+"Service" [color=lightblue, style=filled];
+"OCG/Standard" [shape=triangle, color=green] ;
+"Library" [color=lightblue, style=filled];
+"Commandline Tool" [color=lightblue, style=filled]; 
+"GeoData" [shape=polygon,sides=4,distortion=-0.7,color=green];
 }
