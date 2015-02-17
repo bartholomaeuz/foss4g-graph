@@ -4,10 +4,12 @@ digraph foss4gSym {
 	node [color=lightblue, style=filled];
 	
 "Applications" [shape=polygon,sides=4,distortion=0.7,color=red];	
+"Database"  [shape=box,color=yellow];
 "Extensions/Plugin" [color=orange];
 "Service" [color=lightblue, style=filled];
 "OCG/Standard" [shape=triangle, color=green] ;
 "Library" [color=lightblue, style=filled];
 "Commandline Tool" [color=lightblue, style=filled]; 
 "GeoData" [shape=polygon,sides=4,distortion=-0.7,color=green];
+"Database"  [shape=box,color=yellow];
 }

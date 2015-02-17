@@ -8,6 +8,10 @@ digraph foss4g {
 	"QGIS" -> "SHP File";
 	"QGIS" -> "WMS";
 	"QGIS" -> "WMTS";
+	"QGIS" -> "Spatialite";
+	"Spatialite" -> "GEOS";
+	"Spatialite" -> "Proj.4";
+	"Spatialite" -> "Sqlite3";	
 	"OpenLayers" -> "WMS";
 	"OpenLayers" -> "WMTS";	
 	"SHP File" -> "osm2shp" [style=dotted];
@@ -41,4 +45,7 @@ digraph foss4g {
 "OSM"  [shape=polygon,sides=4,distortion=-0.7,color=green];
 "OpenData"  [shape=polygon,sides=4,distortion=-0.7,color=green];
 "SHP File"  [shape=polygon,sides=4,distortion=-0.7,color=green];
+"Spatialite" [color=orange];	
+"Sqlite3"  [shape=box,color=yellow];
+"POSTGRES"  [shape=box,color=yellow];
 }
